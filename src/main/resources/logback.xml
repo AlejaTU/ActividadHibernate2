@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Consola: salida estándar -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configurar el nivel de logging para Hibernate -->
+    <logger name="org.hibernate" level="WARN"/>
+
+    <!-- Nivel global para la aplicación -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
